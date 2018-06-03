@@ -1,0 +1,22 @@
+dist: trusty
+sudo: false
+
+matrix:
+  include:
+    - language: python
+      python: 3.6
+      before_script:
+        - cd Bridge/python
+      script:
+        - python echo.py
+
+    - language: java
+      jdk: oraclejdk8
+      
+      script:
+        - gradle --build-file Bridge/java/Bridge/build.gradle test
+        - gradle --build-file Visitor/java/Visitor/build.gradle test	
+	
+
+
+
