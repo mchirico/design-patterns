@@ -12,14 +12,7 @@ matrix:
 
     - language: java
       jdk: oraclejdk8
-
       before_script:
         - cd Bridge/java/Bridge/
-	
       script:
         - gradle test
-
-	
-
-
-
