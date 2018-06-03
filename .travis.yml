@@ -11,7 +11,7 @@ matrix:
         - python echo.py
 
     - language: java
-      jdk: oraclejdk9
+      jdk: oraclejdk8
       
       before_script:
         - cd Bridge/java/Bridge/
