@@ -12,8 +12,8 @@
         <mockito-core.version>2.8.47</mockito-core.version>
         <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
 
-        <!-- Java 9 -->
-        <java.version>1.9</java.version>
+        <!-- Java 8 -->
+        <java.version>1.8</java.version>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
 
