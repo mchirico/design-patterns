@@ -16,7 +16,7 @@ matrix:
       before_script:
         - cd Bridge/java/Bridge/
       script:
-        - ./gradle test
+        - gradle test
 
 
 
