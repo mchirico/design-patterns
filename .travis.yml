@@ -12,10 +12,9 @@ matrix:
 
     - language: java
       jdk: oraclejdk8
-      
       script:
-        - gradle --build-file Bridge/java/Bridge/build.gradle test
-        - gradle --build-file Visitor/java/Visitor/build.gradle test	
+        - ./gradleTests.sh
+
 	
 
 
