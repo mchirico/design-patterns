@@ -17,5 +17,9 @@ public class HouseRoomDisplayVisitor implements HouseRoomVisitor {
         System.out.println("In livingroom.");
     }
 
+    @Override
+    public void visit(BedRoom bedRoom) {
+        System.out.println("In bedroom.");
+    }
 
 }
