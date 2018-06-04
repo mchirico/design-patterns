@@ -7,4 +7,6 @@ public interface HouseRoomVisitor {
 
     public void visit(LivingRoom livingRoom);
 
+    public void visit(BedRoom bedRoom);
+
 }
