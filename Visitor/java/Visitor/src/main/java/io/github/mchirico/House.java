@@ -23,7 +23,7 @@ public class House implements HouseRoom {
         for (int i = 0; i < rooms.length; i++) {
             rooms[i].accept(houseRoomVisitor);
         }
-        
+
 
     }
 }
