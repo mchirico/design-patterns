@@ -9,3 +9,7 @@
 Design Patterns
 
 
+[StackBlitz Bridge](https://stackblitz.com/github/mchirico/design-patterns/tree/dp-5/Bridge/angular/bridge)
+
+
+
