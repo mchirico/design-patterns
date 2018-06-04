@@ -16,3 +16,25 @@ matrix:
         - echo 'start of java'
       script:
         - ./gradleTests.sh
+
+    - language: node_js
+      node_js:
+      - '9'
+      addons:
+        chrome: stable
+        apt:
+          sources:
+          - google-chrome
+          packages:
+          - google-chrome-stable
+      before_script:
+        - cd Bridge/angular/bridge/
+        - npm install -g codecov
+        - npm install coveralls
+        - yarn
+        - ng lint
+      script:
+        - export CHROME_BIN=chromium-browser
+        - xvfb-run -a npm run test -- --browsers=ChromeNoSandbox --code-coverage --watch=false
+        - xvfb-run -a npm run e2e --
+
