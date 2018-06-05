@@ -10,7 +10,9 @@ import XCTest
 @testable import Bridge
 
 class BridgeTests: XCTestCase {
-    
+  
+  let b = Example(a: 3)
+  
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,6 +26,7 @@ class BridgeTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+      XCTAssert( b.a == 3)
     }
     
     func testPerformanceExample() {

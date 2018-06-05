@@ -8,6 +8,9 @@
 
 import XCTest
 
+// Added by me...
+@testable import Bridge
+
 class BridgeUITests: XCTestCase {
         
     override func setUp() {
@@ -31,6 +34,26 @@ class BridgeUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+      
+      
+      
+      
+      let app = XCUIApplication()
+      let textField = app.otherElements.containing(.button, identifier:"Press").children(matching: .textField).element
+      textField.tap()
+      textField.typeText("this is here")
+      textField.swipeRight()
+      app.buttons["Press"].tap()
+      
+      let txtField = app.textFields["text0"]
+      XCTAssert(txtField.exists)
+      XCTAssert(txtField.value != nil)
+
+      let txt = txtField.value as! String
+      XCTAssert(txt == "Clear")
+    
+      
+      
     }
     
 }

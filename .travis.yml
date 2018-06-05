@@ -23,9 +23,9 @@ matrix:
         - cd Bridge/swift/Bridge
       script:
         - xcodebuild clean build -project Bridge.xcodeproj -scheme Bridge CODE_SIGNING_REQUIRED=NO
-          -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' | xcpretty -c
+          -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3'
         - xcodebuild test -project Bridge.xcodeproj -scheme Bridge 
-          -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' CODE_SIGNING_REQUIRED=NO  -enableCodeCoverage YES | xcpretty -c
+          -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' CODE_SIGNING_REQUIRED=NO  -enableCodeCoverage YES 
 
     - language: node_js
       node_js:
