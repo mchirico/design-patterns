@@ -17,6 +17,16 @@ matrix:
       script:
         - ./gradleTests.sh
 
+    - language: objective-c
+      osx_image: xcode9.3
+      before_script:
+        - cd Bridge/swift/Bridge
+      script:
+        - xcodebuild clean build -project Bridge.xcodeproj -scheme Bridge CODE_SIGNING_REQUIRED=NO
+          -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' | xcpretty -c
+        - xcodebuild test -project Bridge.xcodeproj -scheme Bridge 
+          -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' CODE_SIGNING_REQUIRED=NO  -enableCodeCoverage YES | xcpretty -c
+
     - language: node_js
       node_js:
       - '9'
