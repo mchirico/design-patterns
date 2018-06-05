@@ -16,6 +16,8 @@ abstract class Shape {
   public abstract draw(): string;
 }
 
+
+
 class Circle extends Shape {
   x: number;
   y: number;
@@ -50,6 +52,7 @@ class GreenCircle implements DrawAPI {
   }
 
 }
+
 
 
 export class BridgeDemo {
