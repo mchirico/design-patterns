@@ -14,6 +14,7 @@
 		A554A06920C6DD5300A1041A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A554A06720C6DD5300A1041A /* LaunchScreen.storyboard */; };
 		A554A07420C6DD5300A1041A /* BridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554A07320C6DD5300A1041A /* BridgeTests.swift */; };
 		A554A07F20C6DD5400A1041A /* BridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554A07E20C6DD5400A1041A /* BridgeUITests.swift */; };
+		A554A08F20C72E2800A1041A /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554A08E20C72E2800A1041A /* Bridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A554A07A20C6DD5400A1041A /* BridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A554A07E20C6DD5400A1041A /* BridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeUITests.swift; sourceTree = "<group>"; };
 		A554A08020C6DD5400A1041A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A554A08E20C72E2800A1041A /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				A554A05E20C6DD5200A1041A /* AppDelegate.swift */,
 				A554A06020C6DD5200A1041A /* ViewController.swift */,
+				A554A08E20C72E2800A1041A /* Bridge.swift */,
 				A554A06220C6DD5200A1041A /* Main.storyboard */,
 				A554A06520C6DD5300A1041A /* Assets.xcassets */,
 				A554A06720C6DD5300A1041A /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				A554A06120C6DD5200A1041A /* ViewController.swift in Sources */,
 				A554A05F20C6DD5200A1041A /* AppDelegate.swift in Sources */,
+				A554A08F20C72E2800A1041A /* Bridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
