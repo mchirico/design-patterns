@@ -20,10 +20,26 @@ class VisitorTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+  
+  func testLogger(){
+    
+    let ExpectedResult = "test0\ntest1"
+    
+    let log = Logger()
+    log.log(msg: "test0")
+    log.log(msg: "test1")
+    let result = log.makeString()
+    
+    
+    
+    XCTAssert(result == ExpectedResult)
+   // XCTFail("\n*****here: ->\(result)<-\n\n")
+  }
+  
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        RunThroughHouse().run()
+        print(log.makeString())
     }
     
     func testPerformanceExample() {

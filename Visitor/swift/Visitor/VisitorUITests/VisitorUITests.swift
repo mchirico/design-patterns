@@ -8,6 +8,9 @@
 
 import XCTest
 
+// Is this needed? (mmc)
+@testable import Visitor
+
 class VisitorUITests: XCTestCase {
         
     override func setUp() {
