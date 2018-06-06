@@ -17,7 +17,7 @@ class GreenCircle: DrawAPI {
 }
 
 protocol Shape {
-  var drawAPI: DrawAPI {get}
+  var drawAPI: DrawAPI {get set}
   func draw() -> String
 }
 
