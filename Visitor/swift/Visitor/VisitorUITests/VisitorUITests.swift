@@ -34,6 +34,26 @@ class VisitorUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+      XCUIApplication().buttons["Button"].tap()
+      
+      let app = XCUIApplication()
+
+      let textView = app.textViews["textView0"]
+      XCTAssert(textView.exists)
+      XCTAssert(textView.value != nil)
+      
+      let txt = textView.value as! String
+      
+      XCTAssert(txt == """
+      Entering the House Door: 1
+      Entering the Garage Door: 2
+      Entering the LivingRoom Door: 3
+      Entering the BedRoom Door: 4
+      Entering the BedRoom Door: 5
+      Entering the BedRoom Door: 6
+      """)
+      
+      
     }
     
 }
