@@ -12,6 +12,7 @@ import XCTest
 class BridgeTests: XCTestCase {
   
   let b = Example(a: 3)
+  let bridgePatternDemo = BridgePatternDemo()
   
     override func setUp() {
         super.setUp()
@@ -27,6 +28,8 @@ class BridgeTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
       XCTAssert( b.a == 3)
+
+      XCTAssert(bridgePatternDemo.draw() == "RedCircle 100 100 10")
     }
     
     func testPerformanceExample() {
