@@ -6,6 +6,7 @@ public class Garage implements HouseRoom, Thermostat {
 
     @Override
     public void accept(HouseRoomVisitor houseRoomVisitor) {
+
         houseRoomVisitor.visit(this);
     }
 
