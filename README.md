@@ -14,6 +14,14 @@ Design Patterns
 
 
 ## Xcode: Setup Instructions
+
+### Make Schema Shareable
+
+[![IMAGE ALT TEXT HERE](https://storage.googleapis.com/montco-stats/imagesUploaded/ScreenShot2018-06-07at10.06.45AM.png)](https://player.vimeo.com/video/273896893)
+
+
+### Set Identifier
+
 When setting up for Xcode testing, and trying to get the results from a textView, you'll need
 to set the identifier..
 <img src='https://storage.googleapis.com/montco-stats/imagesUploaded/ScreenShot2018-06-07at9.55.11AM.png' width="400px">
