@@ -55,3 +55,18 @@ matrix:
         - xvfb-run -a npm run test -- --browsers=ChromeNoSandbox --code-coverage --watch=false
         - xvfb-run -a npm run e2e --
 
+
+    - language: go
+      go:
+      - 1.10.1
+      env:
+      - GOMAXPROCS=4
+      os:
+      - linux
+      install:
+      - go get github.com/stretchr/testify/assert
+      script:
+        - export GOPATH=`pwd`/Bridge/go/Bridge 
+        - go test -race -v -coverprofile=c1.out bridge
+
+
