@@ -13,6 +13,15 @@ Design Patterns
 
 
 
+## Go: Setup Instructions
+
+*GOPATH* needs to point to the proper directory. If you're using GoLand, you'll need to set
+this path within the application.
+
+[<img src='https://storage.googleapis.com/montco-stats/imagesUploaded/ScreenShot2018-06-07at11.36.46AM.png' width="400px">](https://player.vimeo.com/video/273914257)
+
+
+
 ## Xcode: Setup Instructions
 
 ### Make Schema Shareable
