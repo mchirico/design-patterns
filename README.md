@@ -17,7 +17,7 @@ Design Patterns
 
 ### Make Schema Shareable
 
-[![IMAGE ALT TEXT HERE](https://storage.googleapis.com/montco-stats/imagesUploaded/ScreenShot2018-06-07at10.06.45AM.png width="300px")](https://player.vimeo.com/video/273896893)
+[![IMAGE ALT TEXT HERE](https://storage.googleapis.com/montco-stats/imagesUploaded/ScreenShot2018-06-07at10.06.45AM.png)](https://player.vimeo.com/video/273896893)
 
 
 ### Set Identifier
