@@ -36,9 +36,16 @@ compileTestJava {
 }
 
 dependencies {
+    // Needed for Firebase..
+    // implementation 'com.google.firebase:firebase-admin:6.2.0'
+    compile 'com.google.firebase:firebase-admin:6.2.0'
+    compile "org.slf4j:slf4j-simple:1.7.25"
+
     testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
     testCompile("org.mockito:mockito-core:${mockitoVersion}")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+
+
 }
 
 
