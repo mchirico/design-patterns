@@ -23,11 +23,20 @@ namespace ConsoleWithTest
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            
-            var lines = ReadFrom(@"/Users/mchirico/SampleQuotes.txt");
+
+
+
+            var parent =
+              System.IO.Directory.GetParent(Directory.
+                                            GetCurrentDirectory()).Parent.
+                    Parent.
+                    FullName;
+
+
+            var lines = ReadFrom(parent + "/SampleQuotes.txt");
 
             using (System.IO.StreamWriter file =
-                   new System.IO.StreamWriter(@"/Users/mchirico/garbo.txt"))
+                   new System.IO.StreamWriter(parent + "/garbo.txt"))
             foreach (var line in lines)
             {
                 Console.WriteLine(line);
@@ -37,10 +46,21 @@ namespace ConsoleWithTest
         }
 
          private int Do(int a){
-            var lines = ReadFrom(@"/Users/mchirico/SampleQuotes.txt");
+
+
+            var parent =
+             System.IO.Directory.GetParent(Directory.
+                                           GetCurrentDirectory()).Parent.
+
+                   Parent.
+                   FullName;
+            
+
+
+            var lines = ReadFrom(parent + "/SampleQuotes.txt");
 
             using (System.IO.StreamWriter file =
-                   new System.IO.StreamWriter(@"/Users/mchirico/garbo.txt"))
+                   new System.IO.StreamWriter(parent + "/garbo.txt"))
                 foreach (var line in lines)
                 {
                     Console.WriteLine(line);
