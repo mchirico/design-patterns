@@ -2,6 +2,13 @@ dist: trusty
 sudo: false
 matrix:
   include:
+  - language: csharp
+    mono: none
+    dotnet: 2.0
+    before_script:
+    - cd TestTemplate/cSharp/ConsoleWithTest/
+    script:
+    - dotnet test xUnitTestStuff  
   - language: python
     python: 3.6
     before_script:

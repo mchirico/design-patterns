@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleWithTest", "ConsoleWithTest\ConsoleWithTest.csproj", "{CEFE2C17-40E4-4B9D-8FF1-8BDD8121DCE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnitTestStuff", "xUnitTestStuff\xUnitTestStuff.csproj", "{8C751532-422D-4CDF-94E9-E6527E5A7833}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEFE2C17-40E4-4B9D-8FF1-8BDD8121DCE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFE2C17-40E4-4B9D-8FF1-8BDD8121DCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFE2C17-40E4-4B9D-8FF1-8BDD8121DCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFE2C17-40E4-4B9D-8FF1-8BDD8121DCE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C751532-422D-4CDF-94E9-E6527E5A7833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C751532-422D-4CDF-94E9-E6527E5A7833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C751532-422D-4CDF-94E9-E6527E5A7833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C751532-422D-4CDF-94E9-E6527E5A7833}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
