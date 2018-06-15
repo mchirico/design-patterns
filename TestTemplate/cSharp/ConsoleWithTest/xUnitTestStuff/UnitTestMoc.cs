@@ -5,12 +5,12 @@ using Xunit.Abstractions; // For  ITestOutputHelper
 using System.Runtime.CompilerServices;
 using System.Reflection;
 
+using System.IO;
+
 using Moq;
 
 namespace xUnitTestMoc
 {
-
-
 
     public interface IFoo
     {
@@ -36,12 +36,6 @@ namespace xUnitTestMoc
     {
         public virtual string Name { get; set; }
     }
-
-
-
-
-
-
 
 
     public class UnitTest1
@@ -110,6 +104,7 @@ namespace xUnitTestMoc
             // returns 0 on first invocation, 1 on the next, and so on
             Console.WriteLine(mock.Object.GetCount());
         }
+
 
     }
 

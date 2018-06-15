@@ -23,8 +23,9 @@ namespace ConsoleWithTest
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-
-
+            Console.WriteLine("Enter text:");
+            var a = Console.ReadLine();
+            Console.WriteLine($"You entered: {a}");
 
             var parent =
               System.IO.Directory.GetParent(Directory.
@@ -37,16 +38,16 @@ namespace ConsoleWithTest
 
             using (System.IO.StreamWriter file =
                    new System.IO.StreamWriter(parent + "/garbo.txt"))
-            foreach (var line in lines)
-            {
-                Console.WriteLine(line);
-                file.WriteLine(line);
-            }
-            
+                foreach (var line in lines)
+                {
+                    //Console.WriteLine(line);
+                    file.WriteLine(line);
+                }
+
         }
 
-         private int Do(int a){
-
+        private int Do(int a)
+        {
 
             var parent =
              System.IO.Directory.GetParent(Directory.
@@ -54,8 +55,6 @@ namespace ConsoleWithTest
 
                    Parent.
                    FullName;
-            
-
 
             var lines = ReadFrom(parent + "/SampleQuotes.txt");
 
@@ -68,6 +67,14 @@ namespace ConsoleWithTest
                 }
             return a;
         }
+
+
+        public double M(double n)
+        {
+            Func<double, double> f = (x) => x + 2;
+            return f(n);
+        }
+
 
         static IEnumerable<string> ReadFrom(string file)
         {
