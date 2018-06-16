@@ -17,7 +17,7 @@ namespace xUnitTestStuff
         {
             var a = new ConsoleWithTest.TuplesExample();
              Assert.Equal("bob", a.GetInfo().name);
-            Assert.Equal(2, a.GetInfo().age);
+            Assert.Equal(7, a.GetInfo().age);
 
         }
     }
