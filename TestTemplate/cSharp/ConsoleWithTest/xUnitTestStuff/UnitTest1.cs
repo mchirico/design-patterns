@@ -10,7 +10,6 @@ using Moq;
 
 
 
-
 namespace xUnitTestStuff
 {
 
@@ -71,9 +70,6 @@ namespace xUnitTestStuff
         public void TestFunction(){
             var p = new ConsoleWithTest.Program();
             Assert.Equal(14, p.M(12));
-
-            
-
         }
 
 
