@@ -6,9 +6,10 @@ matrix:
     mono: none
     dotnet: 2.1
     before_script:
-    - cd TestTemplate/cSharp/ConsoleWithTest/
+    - echo 'test all from this directory...'
     script:
-    - dotnet test xUnitTestStuff  
+    - dotnet test TestTemplate/cSharp/ConsoleWithTest/xUnitTestStuff
+    - dotnet test Adapter/cSharp/Adapter/TestAdapter      
   - language: python
     python: 3.6
     before_script:
