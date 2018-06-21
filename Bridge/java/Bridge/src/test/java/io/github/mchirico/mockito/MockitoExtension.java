@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  */
-package io.github.bonigarcia.mockito;
+
 
 import static org.mockito.Mockito.mock;
 

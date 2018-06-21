@@ -1,9 +1,8 @@
 package bridge
 
 import (
-		"testing"
-
-	)
+	"testing"
+)
 
 //func TestMain(m *testing.M) {
 //	flag.Parse()
@@ -12,10 +11,10 @@ import (
 
 func TestMyrun(t *testing.T) {
 
-	 var ans = Myrun(3)
-     if ans != 6 {
-     	t.Fail()
-     	t.Log("We expected to get something else")
-	 }
+	var ans = Myrun(3)
+	if ans != 6 {
+		t.Fail()
+		t.Log("We expected to get something else")
+	}
 
 }
