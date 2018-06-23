@@ -24,7 +24,7 @@ this path within the application.
 ### Visual Studio Code
 
 ```bash
-cd design-patterns/Go/src/bridge/
+cd design-patterns/Go/src
 code .
 ```
 
