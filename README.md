@@ -21,10 +21,18 @@ this path within the application.
 [<img src='https://storage.googleapis.com/montco-stats/imagesUploaded/ScreenShot2018-06-07at11.36.46AM.png' width="400px">](https://player.vimeo.com/video/273914257)
 
 
-### Visual Studio Code
+### Bridge
 
 ```bash
-cd design-patterns/Go/src
+export GOPATH=`pwd`/Bridge/go/bridge
+go test -race -v -coverprofile=circleBridge.out circle/bridge
+```
+
+### Visual Studio Code: Bridge
+
+
+```bash
+cd design-patterns/Bridge/go/bridge/src/circle
 code .
 ```
 
