@@ -23,7 +23,7 @@ class BridgePatternDemoTest {
     void setUp() {
         System.setOut(new PrintStream(out));
         System.setErr(new PrintStream(err));
-    }
+    } 
 
     @AfterEach
     void tearDown() {
@@ -43,7 +43,6 @@ class BridgePatternDemoTest {
         // Note return at the end...
         String expected = "Drawing Circle[ color: red, radius: 10, x: 100, 100]\n";
         assertEquals(expected, out.toString());
-
 
     }
 }
