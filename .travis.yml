@@ -74,8 +74,9 @@ matrix:
     - chmod +x ./cc-test-reporter
     - "./cc-test-reporter before-build"
     script:
-    - export GOPATH=`pwd`/Go
-    - go test -race -v -coverprofile=c1.out bridge
+    - export GOPATH=`pwd`/Bridge/go/bridge
+    - go test -race -v -coverprofile=circleBridge.out circle/bridge
+
     after_success:
     - cat c0.out > c.out
     - bash <(curl -s https://codecov.io/bash)
