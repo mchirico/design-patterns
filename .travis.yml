@@ -76,6 +76,8 @@ matrix:
     script:
     - export GOPATH=`pwd`/Bridge/go/bridge
     - go test -race -v -coverprofile=circleBridge.out circle/bridge
+    - export GOPATH=`pwd`/Visitor/go/visitor
+    - go test -race -v -coverprofile=circleBridge.out house/visitor
 
     after_success:
     - cat c0.out > c.out
