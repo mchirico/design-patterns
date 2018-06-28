@@ -1,7 +1,10 @@
 package visitor
 
 //Thanks to http://ecs.victoria.ac.nz/foswiki/pub/Main/TechnicalReportSeries/ECSTR11-01.pdf
-
+/*
+Ref:
+https://gist.github.com/francoishill/f0624e7760aacdc96b42
+*/
 import (
 	"fmt"
 )
