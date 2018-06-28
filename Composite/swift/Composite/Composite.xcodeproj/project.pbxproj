@@ -14,6 +14,7 @@
 		A59F204220E534980075F754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59F204020E534980075F754 /* LaunchScreen.storyboard */; };
 		A59F204D20E534980075F754 /* CompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F204C20E534980075F754 /* CompositeTests.swift */; };
 		A59F205820E534980075F754 /* CompositeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F205720E534980075F754 /* CompositeUITests.swift */; };
+		A5F6B16720E560BB008AEDAA /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F6B16620E560BB008AEDAA /* Composite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A59F205320E534980075F754 /* CompositeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompositeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59F205720E534980075F754 /* CompositeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeUITests.swift; sourceTree = "<group>"; };
 		A59F205920E534980075F754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F6B16620E560BB008AEDAA /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				A59F203720E534950075F754 /* AppDelegate.swift */,
 				A59F203920E534950075F754 /* ViewController.swift */,
+				A5F6B16620E560BB008AEDAA /* Composite.swift */,
 				A59F203B20E534950075F754 /* Main.storyboard */,
 				A59F203E20E534980075F754 /* Assets.xcassets */,
 				A59F204020E534980075F754 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59F203A20E534950075F754 /* ViewController.swift in Sources */,
+				A5F6B16720E560BB008AEDAA /* Composite.swift in Sources */,
 				A59F203820E534950075F754 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
