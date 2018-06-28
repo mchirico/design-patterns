@@ -23,22 +23,22 @@ matrix:
     script:
     - "./gradleTests.sh"
   - language: objective-c
-    osx_image: xcode9.3
+    osx_image: xcode9.4
     before_script:
     - echo "Currently separate Xcode project for each design"
     script:
-    - cd Bridge/swift/Bridge
-    - xcodebuild clean build -project Bridge.xcodeproj -scheme Bridge CODE_SIGNING_REQUIRED=NO
-      -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3'
-    - xcodebuild test -project Bridge.xcodeproj -scheme Bridge -destination 'platform=iOS
-      Simulator,name=iPhone X,OS=11.3' CODE_SIGNING_REQUIRED=NO  -enableCodeCoverage
-      YES
-    - cd ../../../Visitor/swift/Visitor
-    - xcodebuild clean build -project Visitor.xcodeproj -scheme Visitor CODE_SIGNING_REQUIRED=NO
-      -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3'
-    - xcodebuild test -project Visitor.xcodeproj -scheme Visitor -destination 'platform=iOS
-      Simulator,name=iPhone X,OS=11.3' CODE_SIGNING_REQUIRED=NO  -enableCodeCoverage
-      YES
+    - xcodebuild clean build -project ./Bridge/swift/Bridge/Bridge.xcodeproj -scheme Bridge CODE_SIGNING_REQUIRED=NO
+      -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4' -quiet
+    - xcodebuild test -project ./Bridge/swift/Bridge/Bridge.xcodeproj -scheme Bridge -destination 'platform=iOS
+      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet
+    - xcodebuild clean build -project ./Visitor/swift/Visitor/Visitor.xcodeproj -scheme Visitor CODE_SIGNING_REQUIRED=NO
+      -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4' -quiet
+    - xcodebuild test -project ./Visitor/swift/Visitor/Visitor.xcodeproj -scheme Visitor -destination 'platform=iOS
+      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet
+    - xcodebuild clean build -project ./Composite/swift/Composite/Composite.xcodeproj -scheme Composite CODE_SIGNING_REQUIRED=NO
+      -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4' -quiet
+    - xcodebuild test -project ./Composite/swift/Composite/Composite.xcodeproj -scheme Composite -destination 'platform=iOS
+      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet     
   - language: node_js
     node_js:
     - '9'

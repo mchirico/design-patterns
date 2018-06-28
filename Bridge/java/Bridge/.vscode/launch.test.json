@@ -1,0 +1,28 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "Bridge",
+                "projectName": "Bridge",
+                "workingDirectory": "/Users/mchirico/design-patterns/Bridge/java/Bridge",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "Bridge",
+                "projectName": "Bridge",
+                "workingDirectory": "/Users/mchirico/design-patterns/Bridge/java/Bridge",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
