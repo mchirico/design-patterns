@@ -28,8 +28,48 @@ class MocTestsTests: XCTestCase {
   
   func testMyClass() {
     
+    var t = Thingy()
+    t.update(i: 30)
+    XCTAssert(30 == t.get())
+    
     
   }
+  
+  func testMoc(){
+
+    
+
+  }
+  
+  func testHttp() {
+    let url = URL(string: "https://www.stackoverflow.com")
+    
+    let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+      print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue) ?? "not found")
+   
+    print("here...")
+    }
+    
+    
+    task.resume()
+    
+    print("done")
+  }
+  
+  func testHttp2(){
+    Data.searchRequest(term: "jack johnson") { json, error  in
+      print(error ?? "nil")
+      print(json ?? "nil")
+      print("Update views")
+    }
+    
+    //XCTAssert(json == "stuff")
+
+    XCTAssertTrue(1 == 1,"mo")
+  }
+  
+  
+  
   
   func testPerformanceExample() {
     // This is an example of a performance test case.

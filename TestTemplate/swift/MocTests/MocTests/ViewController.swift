@@ -20,6 +20,19 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-
+  @IBAction func button0(_ sender: UIButton) {
+    print("test")
+    Data.searchRequest(term: "jack johnson") { json, error  in
+      print(error ?? "nil")
+      print(json ?? "nil")
+      print("Update views")
+    }
+    
+  }
+  
+  @IBAction func button1(_ sender: UIButton) {
+  }
+  
+  
 }
 

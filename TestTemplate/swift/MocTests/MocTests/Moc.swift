@@ -8,3 +8,19 @@
 
 import Foundation
 
+struct Thingy {
+
+  var a = 3
+  var k = 12
+  
+  mutating func update(i index: Int){
+    self.a = index
+  }
+  
+  mutating func get() -> Int {
+    return self.a
+  }
+  
+}
+
+
