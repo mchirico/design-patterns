@@ -24,6 +24,7 @@ matrix:
     - "./gradleTests.sh"
   - language: objective-c
     osx_image: xcode9.4
+    podfile: TestTemplate/swift/DI/DI/Podfile
     before_script:
     - echo "Currently separate Xcode project for each design"
     script:
@@ -46,7 +47,12 @@ matrix:
     - xcodebuild clean build -project ./TestTemplate/swift/Sqlite/Sqlite.xcodeproj -scheme Sqlite CODE_SIGNING_REQUIRED=NO
       -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4' -quiet
     - xcodebuild test -project ./TestTemplate/swift/Sqlite/Sqlite.xcodeproj -scheme Sqlite -destination 'platform=iOS
-      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet                 
+      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet
+    - pod --project-directory=./TestTemplate/swift/DI/DI/ update
+    - xcodebuild clean build -workspace ./TestTemplate/swift/DI/DI/DI.xcworkspace -scheme DI CODE_SIGNING_REQUIRED=NO
+      -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4' -quiet
+    - xcodebuild test -workspace ./TestTemplate/swift/DI/DI/DI.xcworkspace -scheme DI -destination 'platform=iOS
+      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet                       
   - language: node_js
     node_js:
     - '9'
@@ -69,7 +75,7 @@ matrix:
     - xvfb-run -a npm run e2e --
   - language: go
     go:
-    - 1.10.1
+    - 1.11
     env:
     - GOMAXPROCS=4
     os:
