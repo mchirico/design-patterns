@@ -46,7 +46,11 @@ matrix:
     - xcodebuild clean build -project ./TestTemplate/swift/Sqlite/Sqlite.xcodeproj -scheme Sqlite CODE_SIGNING_REQUIRED=NO
       -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4' -quiet
     - xcodebuild test -project ./TestTemplate/swift/Sqlite/Sqlite.xcodeproj -scheme Sqlite -destination 'platform=iOS
-      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet                 
+      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet
+    - xcodebuild clean build -workspace ./TestTemplate/swift/DI/DI/DI.xcworkspace -scheme DI CODE_SIGNING_REQUIRED=NO
+      -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4' -quiet
+    - xcodebuild test -workspace ./TestTemplate/swift/DI/DI/DI.xcworkspace -scheme DI -destination 'platform=iOS
+      Simulator,name=iPhone X,OS=11.4' -enableCodeCoverage YES -quiet                       
   - language: node_js
     node_js:
     - '9'
