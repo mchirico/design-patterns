@@ -17,6 +17,7 @@
 		A56C14D020FBBDAD002ED244 /* DITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C14CF20FBBDAD002ED244 /* DITests.swift */; };
 		A56C14DB20FBBDAE002ED244 /* DIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C14DA20FBBDAE002ED244 /* DIUITests.swift */; };
 		A56C14E920FBBDC6002ED244 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C14E820FBBDC6002ED244 /* Model.swift */; };
+		A5F0496220FBD9FC00951382 /* DITestWithQuick.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F0496120FBD9FC00951382 /* DITestWithQuick.swift */; };
 		BFF0117F554CF308992B36A0 /* Pods_DITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B8D20A9BCCED48A43AF82 /* Pods_DITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		A56C14DA20FBBDAE002ED244 /* DIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIUITests.swift; sourceTree = "<group>"; };
 		A56C14DC20FBBDAE002ED244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A56C14E820FBBDC6002ED244 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A5F0496120FBD9FC00951382 /* DITestWithQuick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DITestWithQuick.swift; sourceTree = "<group>"; };
 		C0AF3565F1AA512ADC9CD80B /* Pods-DI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DI/Pods-DI.release.xcconfig"; sourceTree = "<group>"; };
 		D7E6D06295A9C0DE08BC4245 /* Pods_DI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0B8D20A9BCCED48A43AF82 /* Pods_DITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A56C14CF20FBBDAD002ED244 /* DITests.swift */,
+				A5F0496120FBD9FC00951382 /* DITestWithQuick.swift */,
 				A56C14D120FBBDAD002ED244 /* Info.plist */,
 			);
 			path = DITests;
@@ -198,6 +201,7 @@
 				A56C14C720FBBDAD002ED244 /* Sources */,
 				A56C14C820FBBDAD002ED244 /* Frameworks */,
 				A56C14C920FBBDAD002ED244 /* Resources */,
+				E2E243BFF5D561E241D3EDFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -371,6 +375,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E2E243BFF5D561E241D3EDFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DITests/Pods-DITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DITests/Pods-DITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -388,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F0496220FBD9FC00951382 /* DITestWithQuick.swift in Sources */,
 				A56C14D020FBBDAD002ED244 /* DITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
