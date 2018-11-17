@@ -21,7 +21,7 @@ func TestGreenCircle(t *testing.T) {
 		t.Errorf("Strings don't match"+
 			"\n%v\n%v", expected, c.Circle(0, 2, 3, b))
 	}
-
+	
 }
 
 func TestDoSomething(t *testing.T) {
