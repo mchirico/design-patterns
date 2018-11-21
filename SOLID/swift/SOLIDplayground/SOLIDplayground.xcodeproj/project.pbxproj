@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5B98FFE21A4C3EC0003F697 /* Solid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B98FFD21A4C3EC0003F697 /* Solid.swift */; };
 		A5C49E6C21A4A6E90060F2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C49E6B21A4A6E90060F2E5 /* AppDelegate.swift */; };
 		A5C49E6E21A4A6E90060F2E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C49E6D21A4A6E90060F2E5 /* ViewController.swift */; };
 		A5C49E7121A4A6E90060F2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C49E6F21A4A6E90060F2E5 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5B98FFD21A4C3EC0003F697 /* Solid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solid.swift; sourceTree = "<group>"; };
 		A5C49E6821A4A6E90060F2E5 /* SOLIDplayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOLIDplayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C49E6B21A4A6E90060F2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C49E6D21A4A6E90060F2E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,9 +76,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5B98FFC21A4C3C30003F697 /* SOLID */ = {
+			isa = PBXGroup;
+			children = (
+				A5B98FFD21A4C3EC0003F697 /* Solid.swift */,
+			);
+			path = SOLID;
+			sourceTree = "<group>";
+		};
 		A5C49E5F21A4A6E90060F2E5 = {
 			isa = PBXGroup;
 			children = (
+				A5B98FFC21A4C3C30003F697 /* SOLID */,
 				A5C49E6A21A4A6E90060F2E5 /* SOLIDplayground */,
 				A5C49E7F21A4A6EB0060F2E5 /* SOLIDplaygroundTests */,
 				A5C49E8A21A4A6EB0060F2E5 /* SOLIDplaygroundUITests */,
@@ -135,6 +146,7 @@
 				A5C49E6421A4A6E90060F2E5 /* Sources */,
 				A5C49E6521A4A6E90060F2E5 /* Frameworks */,
 				A5C49E6621A4A6E90060F2E5 /* Resources */,
+				A5B98FFF21A4DC460003F697 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,6 +263,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A5B98FFF21A4DC460003F697 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n swiftlint\nelse echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5C49E6421A4A6E90060F2E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -258,6 +290,7 @@
 			files = (
 				A5C49E6E21A4A6E90060F2E5 /* ViewController.swift in Sources */,
 				A5C49E6C21A4A6E90060F2E5 /* AppDelegate.swift in Sources */,
+				A5B98FFE21A4C3EC0003F697 /* Solid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

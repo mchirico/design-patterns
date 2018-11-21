@@ -12,16 +12,25 @@ import XCTest
 class SOLIDplaygroundTests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+      
+      let s = Switch()
+      s.flip()
+      let device = Device(s: s)
+      
+      let r = s.f(input: "command input ...") {(result: String) in
+        return ("got back: \(result)")
+      }
+      
+      XCTAssert(r == "Light On", "Simple test")
+      XCTAssert(device.light == "on", device.light)
+
     }
 
     func testPerformanceExample() {
