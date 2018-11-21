@@ -31,7 +31,9 @@ class SOLIDplaygroundTests: XCTestCase {
         return ("got back: \(result)")
       }
       
-      XCTAssert(r == "Light On", "Simple test")
+      let expected = "Here is mylist: device:  Light On"
+      
+      XCTAssert(r == expected, r)
       XCTAssert(device.deviceStatus == true, "\(device.deviceStatus)")
       
     }

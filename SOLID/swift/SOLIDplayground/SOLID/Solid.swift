@@ -23,19 +23,28 @@ protocol DeviceProtocol {
 }
 
 class Switch: SwitchProtocol {
-  var device: DeviceProtocol?
+  var device: [DeviceProtocol?] = []
   var state = false
   
   func f(input: String, completion: (String) -> String) -> String {
     let a = completion("Inside completion \(input)")
-    if let device = device {
-      return device.test(a)
+    var mylist = ""
+    var comma = " "
+    
+    for device in device {
+      if let d =  device {
+        mylist.append("device: ")
+        mylist.append("\(comma)\(d.test(a))")
+        comma = ", "
+      }
     }
-    return "Here is a: \(a)"
+    
+    return "Here is mylist: \(mylist)"
   }
   
   func setDevice(d: DeviceProtocol) {
-    device = d
+    device.append(d)
+    
   }
   
   func flip() { state = !state }
