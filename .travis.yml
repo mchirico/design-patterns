@@ -25,8 +25,7 @@ matrix:
   - language: objective-c
     osx_image: xcode10.1
     before_script:
-    - wget --output-document /tmp/SwiftLint.pkg https://github.com/realm/SwiftLint/releases/tag/0.28.1 &&
-        sudo installer -pkg /tmp/SwiftLint.pkg -target /
+    - ./install_swiftlint.sh
     script:
     - xcodebuild clean build -project ./SOLID/swift/SOLIDplayground/SOLIDplayground.xcodeproj -scheme SOLIDplayground CODE_SIGNING_REQUIRED=NO
       -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' -quiet
