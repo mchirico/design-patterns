@@ -25,7 +25,7 @@ matrix:
   - language: objective-c
     osx_image: xcode10.1
     before_script:
-    - "./install_swiftlint.sh"
+    - echo 'xcode10.1'
     script:
     - xcodebuild clean build -project ./SOLID/swift/SOLIDplayground/SOLIDplayground.xcodeproj -scheme SOLIDplayground CODE_SIGNING_REQUIRED=NO
       -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' -quiet
