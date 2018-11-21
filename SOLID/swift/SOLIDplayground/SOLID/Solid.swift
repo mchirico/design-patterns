@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol S {
+protocol SwitchProtocol {
   var state: Bool {get set}
   func status() -> Bool
   func flip()
@@ -17,19 +17,19 @@ protocol S {
 }
 
 protocol DeviceProtocol {
-  var s: S {get set}
-  func test() -> String
-  var light: String {get set}
+  var s: SwitchProtocol {get set}
+  func test(_: String) -> String
+  var deviceStatus: Bool {get set}
 }
 
-class Switch: S {
+class Switch: SwitchProtocol {
   var device: DeviceProtocol?
   var state = false
   
   func f(input: String, completion: (String) -> String) -> String {
     let a = completion("Inside completion \(input)")
     if let device = device {
-      return device.test()
+      return device.test(a)
     }
     return "Here is a: \(a)"
   }
@@ -47,21 +47,25 @@ class Switch: S {
 }
 
 class Device: DeviceProtocol {
-  var s: S
-
-  var light = "off"
+  var s: SwitchProtocol
+  var deviceStatus = false
   
-  init(s: S = Switch()) {
+  init(s: SwitchProtocol = Switch()) {
     self.s = s
     self.s.setDevice(d: self)
   }
   
-  func test() -> String {
+  func replaceSwitch(s: SwitchProtocol) {
+    self.s = s
+    self.s.setDevice(d: self)
+  }
+  
+  func test(_ txt: String="default") -> String {
     if s.status() {
-      light = "on"
+      deviceStatus = true
       return "Light On"
     }
-    light = "off"
+    deviceStatus = false
     return "Light Off"
   }
   

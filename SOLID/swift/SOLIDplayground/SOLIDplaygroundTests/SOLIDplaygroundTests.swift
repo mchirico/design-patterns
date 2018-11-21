@@ -21,16 +21,19 @@ class SOLIDplaygroundTests: XCTestCase {
     func testExample() {
       
       let s = Switch()
-      s.flip()
+      let s2 = Switch()
+      s2.flip()
+     
       let device = Device(s: s)
+      device.replaceSwitch(s: s2)
       
       let r = s.f(input: "command input ...") {(result: String) in
         return ("got back: \(result)")
       }
       
       XCTAssert(r == "Light On", "Simple test")
-      XCTAssert(device.light == "on", device.light)
-
+      XCTAssert(device.deviceStatus == true, "\(device.deviceStatus)")
+      
     }
 
     func testPerformanceExample() {
