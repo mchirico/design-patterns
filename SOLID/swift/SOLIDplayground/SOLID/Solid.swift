@@ -11,6 +11,7 @@ import Foundation
 protocol SwitchProtocol {
   var state: Bool {get set}
   func status() -> Bool
+  func test(index: Int,s: String) -> String
   func flip()
   func f(input: String, completion:  (_ result: String) -> String ) -> String
   func setDevice(d: DeviceProtocol)
@@ -48,6 +49,14 @@ class Switch: SwitchProtocol {
   }
   
   func flip() { state = !state }
+  
+  func test(index: Int, s: String) -> String {
+    
+    if let device = device[index] {
+      return device.test(s)
+    }
+    return "Not found"
+  }
   
   func status() -> Bool {
     return state
