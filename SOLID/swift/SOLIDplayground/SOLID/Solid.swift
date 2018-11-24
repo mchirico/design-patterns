@@ -11,10 +11,19 @@ import Foundation
 protocol SwitchProtocol {
   var state: Bool {get set}
   func status() -> Bool
-  func test(index: Int,s: String) -> String
+  func test(index: Int, s: String) -> String
   func flip()
   func f(input: String, completion:  (_ result: String) -> String ) -> String
   func setDevice(d: DeviceProtocol)
+}
+
+extension SwitchProtocol {
+  var state: Bool {
+    return false
+  }
+  func status() -> Bool {
+    return false
+  }
 }
 
 protocol DeviceProtocol {
