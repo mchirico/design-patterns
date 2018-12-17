@@ -18,5 +18,10 @@ class FacadeTest {
 
     @Test
     void accept() {
+
+        ShapeMaker shapeMaker = new ShapeMaker();
+        assertEquals("Circle::draw()", shapeMaker.drawCircle());
+        assertEquals("Rectangle::draw()", shapeMaker.drawRectangle());
+        assertEquals("Square::draw()", shapeMaker.drawSquare());
     }
 }

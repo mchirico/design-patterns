@@ -1,5 +1,3 @@
-
-
 protocol DrawAPI {
   func drawCircle(radius: Int, x: Int, y: Int) -> String
 }
@@ -21,17 +19,18 @@ protocol Shape {
   func draw() -> String
 }
 
-
-class Circle: Shape{
+class Circle: Shape {
   
   var drawAPI: DrawAPI
-  var x,y,radius: Int
+  var x, y, radius: Int
   
   func draw() -> String {
-    return self.drawAPI.drawCircle(radius: self.radius,x: self.x,y: self.y)
+    return self.drawAPI.drawCircle(radius: self.radius,
+                                   x: self.x,
+                                   y: self.y)
   }
   
-  init(x: Int, y: Int, radius: Int, drawAPI: DrawAPI){
+  init(x: Int, y: Int, radius: Int, drawAPI: DrawAPI) {
     self.x = x
     self.y = y
     self.radius = radius
@@ -39,14 +38,12 @@ class Circle: Shape{
   }
 }
 
-
 class BridgePatternDemo {
-  let redCircle = Circle(x: 100,y: 100,radius: 10, drawAPI: RedCircle())
+  let redCircle = Circle(x: 100, y: 100, radius: 10, drawAPI: RedCircle())
   func draw() -> String {
     return redCircle.draw()
   }
 }
-
 
 class Example {
   var a = 0

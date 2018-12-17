@@ -1,0 +1,24 @@
+PODS:
+  - Nimble (7.1.3)
+  - Quick (1.3.1)
+  - Swinject (2.4.1)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - Swinject
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+    - Swinject
+
+SPEC CHECKSUMS:
+  Nimble: 2839b01d1b31f6a6a7777a221f0d91cf52e8e27b
+  Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
+  Swinject: f7f15a9672e99328c1f07f277091087917215700
+
+PODFILE CHECKSUM: f90c937b2d78cd98a359b8b10ff9c274449e2092
+
+COCOAPODS: 1.5.3

@@ -4,7 +4,8 @@ package io.github.mchirico;
 public class Square implements Shape {
 
     @Override
-    public void draw() {
+    public String draw() {
         System.out.println("Square::draw()");
+        return "Square::draw()";
     }
 }
